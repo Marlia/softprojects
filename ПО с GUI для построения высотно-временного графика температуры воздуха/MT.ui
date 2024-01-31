@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>672</width>
+    <height>546</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>672</width>
+    <height>546</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>МРТ-5 построение графиков</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:qlineargradient(spread:reflect, x1:0, y1:1, x2:1, y2:0, stop:0.148615 rgba(124, 48, 164, 255), stop:1 rgba(151, 255, 113, 255))</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>600</width>
+     <height>400</height>
+    </size>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>Выберите дату</string>
+    </property>
+   </widget>
+   <widget class="QDateEdit" name="dateEdit">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="dateTime">
+     <datetime>
+      <hour>0</hour>
+      <minute>0</minute>
+      <second>0</second>
+      <year>2020</year>
+      <month>4</month>
+      <day>1</day>
+     </datetime>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="make_plot_button">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>380</y>
+      <width>211</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>Создать график</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_for_high">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>410</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>50, 150</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>320</y>
+      <width>231</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>Введите одну или несколько высот
+ через запятую (0-1000 с шагом 50)</string>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>90</y>
+      <width>371</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>Укажите размер графика в дюймах</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>140</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+    <property name="placeholderText">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>140</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:0.003, y1:1, x2:0.991, y2:0.015194, stop:0.158324 rgba(163, 119, 163, 255), stop:0.538999 rgba(143, 175, 218, 255), stop:1 rgba(226, 214, 255, 255))</string>
+    </property>
+    <property name="text">
+     <string>10</string>
+    </property>
+    <property name="placeholderText">
+     <string>y</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>250</y>
+      <width>591</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>C:\Users\kirit\Downloads\archive\</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

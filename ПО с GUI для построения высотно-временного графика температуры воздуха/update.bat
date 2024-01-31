@@ -1,0 +1,1 @@
+pyuic5.exe MT.ui -o MT.py -x
